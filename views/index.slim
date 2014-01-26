@@ -5,3 +5,25 @@ html
   body
     div
       h1 Compare Linker
+      ul
+        - unless ENV["OCTOKIT_ACCESS_TOKEN"]
+          li
+            |
+              ! Please set OCTOKIT_ACCESS_TOKEN
+              <pre>$ heroku config:set OCTOKIT_ACCESS_TOKEN=[your github access token]</pre>
+        - unless ENV["USERNAME"]
+          li
+            |
+              ! Please set USERNAME
+              <pre>$ heroku config:set USERNAME=[basic auth username]</pre>
+        - unless ENV["PASSWORD"]
+          li
+            |
+              ! Please set PASSWORD
+              <pre>$ heroku config:set PASSWORD=[basic auth password]</pre>
+        - if ENV["OCTOKIT_ACCESS_TOKEN"] && ENV["USERNAME"] && ENV["PASSWORD"]
+          li
+            |
+              ! Add webhook to your repository
+              <pre>$ ruby add_webhook.rb [repo_full_name]</pre>
+              
