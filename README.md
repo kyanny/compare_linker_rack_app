@@ -1,6 +1,8 @@
 CompareLinker Rack App
 ======================
 
+Rack application to integrate [Compare Linker](https://github.com/kyanny/compare_linker) and GitHub's pull request webook.
+
 Heroku Setup
 ------------
 
