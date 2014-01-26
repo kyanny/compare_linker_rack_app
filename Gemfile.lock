@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/kyanny/compare_linker.git
-  revision: 7d122ed901d3710bc608f9f5c020ee6de179e1b1
+  revision: c441999e1d032e813ec981d8bcbf48195785d235
+  tag: v1.0.0
   specs:
-    compare_linker (0.0.1)
+    compare_linker (1.0.0)
       httpclient
       octokit
 
