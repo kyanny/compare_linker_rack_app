@@ -1,3 +1,6 @@
 require_relative "app"
 
-run Sinatra::Application
+run Rack::URLMap.new({
+  "/" => Public,
+  "/p" => Protected
+})

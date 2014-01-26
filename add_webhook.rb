@@ -33,7 +33,7 @@ webhook_url = URI(`heroku apps:info`.match(/^Web URL:\s+(\S+)/)[1]).tap do |uri|
   uri.scheme = "https"
   uri.user = username
   uri.password = password
-  uri.path = "/webhook"
+  uri.path = "/p/webhook"
 end
 
 octokit = Octokit::Client.new(access_token: octokit_access_token)
