@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/kyanny/compare_linker.git
-  revision: c441999e1d032e813ec981d8bcbf48195785d235
-  tag: v1.0.0
+  revision: 96e4543e54cd3486ae2f28059118ba5ac9e3ffca
+  tag: v1.0.1
   specs:
     compare_linker (1.0.0)
       httpclient
