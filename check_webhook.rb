@@ -50,7 +50,9 @@ end
 repos.each do |repo|
   begin
     hook = octokit.hooks("#{repo.full_name}").detect { |h|
-      h.name == "web" && h.events.include?("pull_request") && (h.config.rels && h.config.rels[:self] && h.config.rels[:self].href == webhook_url.to_s)
+      if h.config && h.config.rels && h.config.rels[:self] && h.config.rels[:self].href
+        h.name == "web" && h.events.include?("pull_request") && (h.config.rels[:self].href == webhook_url.to_s)
+      end
     }
     if hook.nil?
       puts "Not Installed: #{repo.full_name}"
@@ -62,6 +64,6 @@ repos.each do |repo|
       end
     end
   rescue => e
-    # puts "Error: #{owner}/#{repo_name} - #{e}"
+    # puts "Error: #{repo.full_name} - #{e}"
   end
 end
