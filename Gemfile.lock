@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/kyanny/compare_linker.git
-  revision: 96e4543e54cd3486ae2f28059118ba5ac9e3ffca
-  tag: v1.0.1
+  revision: 604b0c22aeb9916af38c4eb1a3ffff520b3d6fc9
+  tag: v1.0.2
   specs:
-    compare_linker (1.0.0)
+    compare_linker (1.0.2)
       httpclient
       octokit
 
@@ -18,7 +18,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     httpclient (2.3.4.1)
     multipart-post (2.0.0)
-    octokit (2.7.0)
+    octokit (2.7.1)
       sawyer (~> 0.5.2)
     rack (1.5.2)
     rack-protection (1.5.2)
